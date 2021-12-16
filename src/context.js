@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { createContext, useState, useContext, useEffect } from "react"
-import firebase from 'firebase/compat/app';
+// import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 const BankContext = createContext(null);
 export function useBankContext () {
@@ -9,7 +9,7 @@ export function useBankContext () {
 function ContextProvider({children}){
   const [users, setUsers] = useState([{name:'abel',email:'abel@mit.edu',password:'secret',balance:100, loged: false}])
   const [currentUser, setCurrentUser] = useState()
-  const [done,setDone] = useState(false)
+  // const [done,setDone] = useState(false)
   useEffect(() => {
     fetch('http://localhost:3100/account/all')
       .then(response => response.json())
@@ -34,12 +34,12 @@ function ContextProvider({children}){
   function handleSetCurrentUser(user) {
     setCurrentUser(user)
   }
-  useEffect(() => {
-    if(done){
-      let user = users?.filter(thisuser => thisuser.email === currentUser.email)
-      login(user[0])
-    }
-  }, [done])
+  // useEffect(() => {
+  //   if(done){
+  //     let user = users?.filter(thisuser => thisuser.email === currentUser.email)
+  //     login(user[0])
+  //   }
+  // }, [done])
   // firebase.auth().onAuthStateChanged(firebaseUser => {
   //   if (firebaseUser) {
   //     // let user = users?.filter(thisuser => thisuser.email === firebaseUser.email)

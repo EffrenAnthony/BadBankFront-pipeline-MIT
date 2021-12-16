@@ -1,9 +1,11 @@
-import { render,fireEvent } from '@testing-library/react';
-import userEvent from "@testing-library/user-event";
+import { render,
+  // fireEvent 
+} from '@testing-library/react';
+// import userEvent from "@testing-library/user-event";
 import App from './App';
-import Deposit from './Components/Deposit';
-import Login from './Components/Login';
-import ContextProvider from './context';
+// import Deposit from './Components/Deposit';
+// import Login from './Components/Login';
+// import ContextProvider from './context';
 
 describe('Banking app rendering', () => {
   test('Render', () => {  
