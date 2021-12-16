@@ -11,6 +11,7 @@ describe('Banking app rendering', () => {
   test('Render', () => {  
     const {getByText } = render(<App/>);
     getByText('BadBank Landing Module');
+    
   });
 
   // test('login', () => {
