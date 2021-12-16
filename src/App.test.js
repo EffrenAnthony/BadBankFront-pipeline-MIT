@@ -10,7 +10,7 @@ import App from './App';
 describe('Banking app rendering', () => {
   test('Render', () => {  
     const {getByText } = render(<App/>);
-    getByText('BadBank Landing Module');
+    getByText('BadBank Landing ');
   });
 
   // test('login', () => {
