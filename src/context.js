@@ -18,6 +18,7 @@ function ContextProvider({children}){
           setUsers(data);                
       });
   },[])
+
   function login(user){
     const index = users.indexOf(user)
     const usersCopy = [...users]
