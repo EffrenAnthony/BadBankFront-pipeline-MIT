@@ -9,14 +9,14 @@ git:
 script:
   - npm test
   - npm build
-deploy:
-  provider: pages
-  edge: true
-  skip-cleanup: true
-  keep-history: true
-  github-token: $GITHUB_TOKEN
-  local-dir: build/
-  target-branch: main
-  commit_message: "Deploy release ${TRAVIS_TAG}"
-  on:
-    branch: main
+# deploy:
+#   provider: pages
+#   edge: true
+#   skip-cleanup: true
+#   keep-history: true
+#   github-token: $GITHUB_TOKEN
+#   local-dir: build/
+#   target-branch: main
+#   commit_message: "Deploy release ${TRAVIS_TAG}"
+#   on:
+#     branch: main
